@@ -1,3 +1,23 @@
+## 姓名:林承緯
+## 學號:E94121020
+## Python version:3.12
+## Exact Run Commands
+請確保終端機已切換至 `lab01-work` 目錄，並且已經啟動 Python 虛擬環境 (`.venv`)。
+
+**1. 執行所有自動化測試 (包含防呆機制與格式檢查)：**
+powershell
+python -m pytest -q
+## Known Limitations
+score 參數必須是int型態。若傳入浮點數 (如 60.0)、布林值 (True/False) 或字串 (如 "eighty")，程式將不予轉換，並直接拋出 TypeError。
+
+name 參數必須是字串 (str)。若傳入數字或其他型別，將拋出 TypeError。
+
+分數範圍限制 (Score Range)：
+系統僅接受落在 0 到 100 之間（含邊界）的分數。若傳入超出此範圍的數字（例如 -1 或 101），程式會拋出 ValueError。
+
+名稱內容限制 (Name Format)：
+
+系統會自動修剪 (Trim) 名字前後的多餘空白。但若修剪後變成「空字串」（例如使用者只輸入 "   "），系統會判定為無效名稱並拋出 ValueError。
 # Lab 01 - Environment, Git, and Tracebacks
 
 > Course block: D1-B1, 09:00-12:00  
